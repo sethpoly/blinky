@@ -1,10 +1,9 @@
 #include <Arduino.h>
 
-#define toggleSwitch 9
-#define led1 8
-#define led2 7
-#define led3 6
-#define led4 5
+#define led1 0
+#define led2 1
+#define led3 2
+#define led4 3
 #define led5 4
 
 bool state = true;
@@ -21,10 +20,6 @@ void setAllExcept(bool state, int arrayLength, int ledToIgnore) {
 
     digitalWrite(leds[i], state);
   }
-}
-
-void checkToggleSwitch() {
-  Serial.println(digitalRead(toggleSwitch));
 }
 
 void snake(int arrayLength, int millisecondsBetween) {
@@ -89,8 +84,6 @@ void setPattern(int arg1, int arg2, void ( *f )( int, int )) {
 }
 
 void setup() {
-  Serial.begin(9600);
-  pinMode(toggleSwitch, INPUT_PULLUP);
   pinMode(led1, OUTPUT);
   pinMode(led2, OUTPUT);
   pinMode(led3, OUTPUT);
@@ -106,12 +99,8 @@ void setup() {
 }
 
 void loop() {
-  if(digitalRead(toggleSwitch) == LOW) {
-
-    // Cycle through patterns
-    setPattern(ledArrayLength, 50, snake);
-    setPattern(ledArrayLength, 80, doubleSnake);
-    setPattern(leds[rand() % ledArrayLength], 0, brokenLight);
-  }
-  checkToggleSwitch();
+  // Cycle through patterns
+  setPattern(ledArrayLength, 50, snake);
+  setPattern(ledArrayLength, 80, doubleSnake);
+  setPattern(leds[rand() % ledArrayLength], 0, brokenLight);
 }
