@@ -2,7 +2,7 @@
 Exposed circuit with cool LED patterns and a terrible soldering job
 
 <br>
-<img src="https://github.com/sethpoly/blinky/raw/main/demo/images/exposed_circuit.jpg" width=60% height=60%>
+<img src="https://github.com/sethpoly/blinky/raw/main/images/exposed_circuit.jpg" width=60% height=60%>
 <br><br>
 
 ## Snake
