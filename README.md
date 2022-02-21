@@ -5,14 +5,16 @@ Exposed circuit with cool LED patterns and a terrible soldering job
 <img src="https://github.com/sethpoly/blinky/raw/main/images/exposed_circuit.jpg" width=60% height=60%>
 <br><br>
 
-## Snake
-Left -> right, then reversed. Like a slithering snake.
+## LED Patterns
 
-## Double Snake
-Same as snake. But starts on opposite ends, and pattern meets in the middle.
 
-## Broken Light
-Simulate a broken light. Not really useful or cool, but mildly interesting.
+- **Snake**: left to right, then reversed. Like a slithering snake.
+
+
+- **Double Snake**: same as snake, but starts on opposite ends, and pattern meets in the middle.
+
+
+- **Broken Light**: simulate a broken light - not really useful or cool, but mildly interesting.
 
 ## Hardware
 - ATtiny85
